@@ -465,7 +465,7 @@ def string2hex(line): # prend une string et retourne la string hexadécimale cor
   
   return hexString
 
-def AES_CBC_encrypt(string, key, security): # prend une string de texte, une clé en forme de string hexadécimale
+def CBC_encrypt(string, key, security): # prend une string de texte, une clé en forme de string hexadécimale
                                         # et un entier représentant le niveau de sécurité (128, 192 ou 256), 
                                         # et retourne en string hexadécimale la version chiffrée de la string originale
   hexString = string2hex(string)
@@ -512,7 +512,7 @@ def AES_CBC_encrypt(string, key, security): # prend une string de texte, une cl�
 
   return cypher
 
-def AES_CBC_decrypt(cypher, key, security): # prend une string hexadécimale, une clé en forme de string hexadécimale
+def CBC_decrypt(cypher, key, security): # prend une string hexadécimale, une clé en forme de string hexadécimale
                                         # et un entier représentant le niveau de sécurité (128, 192 ou 256), 
                                         # et retourne en string textuelle la version déchiffrée de la string originale
 
